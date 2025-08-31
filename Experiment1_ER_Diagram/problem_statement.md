@@ -99,9 +99,13 @@ The Central Library wants to manage book lending and cultural events.
 
 ### Assumptions
 1.A Member can borrow multiple books, but a lending record is created per transaction.
+
 2.A Book can be borrowed multiple times by different members.
+
 3.Each Lending must have an Issue_Date, and may have a Return_Date.
+
 4.A Library may host multiple Events.
+
 5.Each Event is managed by one Staff member, but a staff can manage many events.
 
 # Scenario C: Restaurant Table Reservation & Ordering
@@ -156,7 +160,12 @@ A popular restaurant wants to manage reservations, orders, and billing.
 5.Events are optional and depend on specific customer-service interactions.
 ## Instructions for Students
 1.Complete all three scenarios (A, B, C).
+
 2.Identify entities, relationships, and attributes for each.
+
 3.Draw ER diagrams using draw.io / diagrams.net or hand-drawn & scanned.
+
 4.Fill in all tables and assumptions for each scenario.
+
 5.Export the completed Markdown (with diagrams) as a single PDF
+
