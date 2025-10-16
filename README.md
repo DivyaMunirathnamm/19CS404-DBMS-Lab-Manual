@@ -15,9 +15,11 @@ CREATE TABLE (
 );
 ```
 # 2. ALTER
-Used to add, modify, drop, or rename fields in an existing relation. (a) ADD
-
+Used to add, modify, drop, or rename fields in an existing relation. 
+(a) ADD
+```
 ALTER TABLE std ADD (Address CHAR(10));
+```
 (b) MODIFY
 
 ``` ALTER TABLE relation_name MODIFY (field_1 new_data_type(size)); ```
@@ -118,11 +120,17 @@ INSERT INTO Employee VALUES (8, 'Ava Miller', 'Consultant', 'IT', NULL);
 <img width="1162" height="122" alt="image" src="https://github.com/user-attachments/assets/44df2e93-b344-4881-b949-c9713e25d5b5" />
 
 # Question 3
+
 Create a table named Invoices with the following constraints:
+
 InvoiceID as INTEGER should be the primary key.
+
 InvoiceDate as DATE.
+
 Amount as REAL should be greater than 0.
+
 DueDate as DATE should be greater than the InvoiceDate.
+
 OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
 
 ```
@@ -141,9 +149,12 @@ Output:
 # Question 4
 Create a table named Department with the following constraints:
 
-DepartmentID as INTEGER should be the primary key.
+DepartmentID as INTEGER should be the primary key. 
+
 DepartmentName as TEXT should be unique and not NULL.
+
 Location as TEXT.
+
 ```
 CREATE TABLE Department (
     DepartmentID INTEGER PRIMARY KEY,
@@ -156,6 +167,7 @@ Output:
 <img width="1196" height="126" alt="image" src="https://github.com/user-attachments/assets/195345d0-f8c0-4ea3-ba20-60465e4ca031" />
 
 # Question 5
+
 Create a table named jobs including columns job_id, job_title, min_salary and max_salary, and make sure that, the default value for job_title is blank and min_salary is 8000 and max_salary is NULL will be entered automatically at the time of insertion if no value assigned for the specified columns.
 ```
 CREATE TABLE jobs (
@@ -169,7 +181,11 @@ CREATE TABLE jobs (
 <img width="1038" height="150" alt="image" src="https://github.com/user-attachments/assets/de99cce2-b3cd-4681-b031-29af57b2bf81" />
 
 # Question 6
-Create a table named Orders with the following constraints: OrderID as INTEGER should be the primary key. OrderDate as DATE should be not NULL. CustomerID as INTEGER should be a foreign key referencing Customers(CustomerID).
+Create a table named Orders with the following constraints:
+
+OrderID as INTEGER should be the primary key. OrderDate as DATE should be not NULL. 
+
+CustomerID as INTEGER should be a foreign key referencing Customers(CustomerID).
 ```
 CREATE TABLE Orders (
     OrderID INTEGER PRIMARY KEY,
@@ -194,6 +210,8 @@ Sample table: Student_details
 2                Gender           TEXT             1                  0
 3                Subject          VARCHAR(30)      0                  0
 4                MARKS            INT (3)          0                  0
+```
+```
 ALTER TABLE Student_details ADD Mobilenumber number;
 ```
 # Output:
@@ -212,11 +230,12 @@ ALTER TABLE Student_details ADD Address VARCHAR(100);
 
 # Question 9
 Create a table named Reviews with the following columns:
-```
+
 ReviewID as INTEGER
 ProductID as INTEGER
 Rating as REAL
 ReviewText as TEXT
+```
 CREATE TABLE Reviews (
     ReviewID INTEGER,
     ProductID INTEGER,
