@@ -20,24 +20,34 @@ Used to add, modify, drop, or rename fields in an existing relation.
 ```
 ALTER TABLE std ADD (Address CHAR(10));
 ```
-(b) MODIFY
+# (b) MODIFY
 
-``` ALTER TABLE relation_name MODIFY (field_1 new_data_type(size)); ```
-(c) DROP
+```
+ALTER TABLE relation_name MODIFY (field_1 new_data_type(size));
+ ```
+# (c) DROP
 
-``` ALTER TABLE relation_name DROP COLUMN field_name; ```
-(d) RENAME
+``` 
+ALTER TABLE relation_name DROP COLUMN field_name;
+```
+# (d) RENAME
 
-``` ALTER TABLE relation_name RENAME COLUMN old_field_name TO new_field_name; ```
+```
+ALTER TABLE relation_name RENAME COLUMN old_field_name TO new_field_name;
+```
 # 3. DROP TABLE
 Used to permanently delete the structure and data of a table.
 
-``` DROP TABLE relation_name; ```
+```
+DROP TABLE relation_name;
+```
 
 # 4. RENAME
 Used to rename an existing database object.
 
-``` RENAME TABLE old_relation_name TO new_relation_name; ```
+```
+RENAME TABLE old_relation_name TO new_relation_name;
+```
 # CONSTRAINTS
 Constraints are used to specify rules for the data in a table. If there is any violation between the constraint and the data action, the action is aborted by the constraint. It can be specified when the table is created (using CREATE TABLE) or after it is created (using ALTER TABLE).
 
