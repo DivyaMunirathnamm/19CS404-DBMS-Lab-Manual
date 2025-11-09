@@ -53,125 +53,196 @@ ON table1.column = table2.column;
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+
+![image](https://github.com/user-attachments/assets/49b29802-c810-445f-9e7f-eec32e3797bd)
 
 ```sql
--- Paste your SQL code below for Question 1
+select
+ n.nurse_id,
+ n.first_name,
+ n.last_name,
+ n.department_id,
+ d.department_name
+from
+  nurses n
+inner join
+ departments d
+on
+ n.department_id=d.department_id
+
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/fc169cfd-8d27-4cfc-8d92-dd34293462ef)
 
 **Question 2**
----
--- Paste Question 2 here
+
+![image](https://github.com/user-attachments/assets/a46a4eb5-2ccd-4c46-81a5-1e6998c44f58)
 
 ```sql
--- Paste your SQL code below for Question 2
+select c.cust_name,c.city,c.grade,s.name as Salesman,s.city from customer c
+inner join salesman s on c.salesman_id=s.salesman_id
+where c.grade<300
+order by c.customer_id asc;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/dad3fbc1-b23f-4ab1-a0c8-ea7f28bade28)
 
 **Question 3**
----
--- Paste Question 3 here
+
+![image](https://github.com/user-attachments/assets/4d2b264a-a818-48f1-a91c-f66b74b2d8a5)
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT 
+    s.name,
+    c.cust_name,
+    c.city,
+    c.grade,
+    c.salesman_id
+FROM 
+    salesman s
+LEFT JOIN 
+    customer c ON s.salesman_id = c.salesman_id;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/a1214911-c053-422e-ba06-4c184b5d7ff5)
 
 **Question 4**
----
--- Paste Question 4 here
+
+![image](https://github.com/user-attachments/assets/62fe53ff-0d4a-4cbe-a808-ab5214598703)
 
 ```sql
--- Paste your SQL code below for Question 4
+select s.* from salesman s
+left join customer c on s.salesman_id=c.salesman_id
+where c.cust_name ='Fabian Johns';
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/747bc7a0-1c51-4ae9-86f5-cfc95cdc02ea)
 
 **Question 5**
----
--- Paste Question 5 here
+
+![image](https://github.com/user-attachments/assets/b4d51d48-3104-4e27-8d13-5fe6916699b8)
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT p.first_name AS patient_name
+FROM patients p
+INNER JOIN test_results tr ON p.patient_id = tr.patient_id
+WHERE tr.test_name = 'Blood Pressure';
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/ae041fd9-72eb-4252-8072-697584ebf4a2)
 
 **Question 6**
----
--- Paste Question 6 here
+
+![image](https://github.com/user-attachments/assets/6ad9027d-b8fa-44b3-9bc0-629418a7ae56)
 
 ```sql
--- Paste your SQL code below for Question 6
+select c.cust_name as "Customer Name",c.city,s.name as Salesman,s.commission from customer c
+join salesman s on c.salesman_id=s.salesman_id
+where s.commission>0.12;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/02728cab-49ed-45c9-9f3c-ce89dd14376f)
 
 **Question 7**
----
--- Paste Question 7 here
+
+![image](https://github.com/user-attachments/assets/7a3003aa-8273-4941-93d3-bf5d39544b8d)
 
 ```sql
--- Paste your SQL code below for Question 7
+select
+  c.cust_name as "Customer Name",
+  c.city,
+  s.name as "Salesman",
+  s.city,
+  s.commission
+from
+  customer c
+inner join
+   salesman s
+on
+  c.salesman_id=s.salesman_id
+where
+  c.city!=s.city
+  and s.commission>0.12;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/3ab593b5-e46e-4098-a762-1efdc15f9d13)
 
 **Question 8**
----
--- Paste Question 8 here
+
+![image](https://github.com/user-attachments/assets/193a3a8b-1335-4b07-8ad7-93c95854bbf3)
 
 ```sql
--- Paste your SQL code below for Question 8
+select
+  c.cust_name,
+  c.city,
+  o.ord_no,
+  o.ord_date,
+  o.purch_amt as "Order Amount",
+  s.name,
+  s.commission
+from
+  customer c
+left join 
+   orders o
+on
+  c.customer_id=o.customer_id
+left  join
+   salesman s
+on
+   c.salesman_id=s.salesman_id;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/6622abed-4475-44db-9426-5b3363365adc)
 
 **Question 9**
----
--- Paste Question 9 here
+
+![image](https://github.com/user-attachments/assets/611af145-2254-4cd0-84de-c727550f267e)
 
 ```sql
--- Paste your SQL code below for Question 9
+select p.* ,d.specialization as doctor_specialization from patients p
+inner join doctors d on p.doctor_id=d.doctor_id;
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/1f909086-a729-4f7a-9793-c0080fef8a92)
 
 **Question 10**
----
--- Paste Question 10 here
+
+![image](https://github.com/user-attachments/assets/4065b691-a6e8-4ea4-aa04-f0b61c001dad)
 
 ```sql
--- Paste your SQL code below for Question 10
+select 
+ s.name as "Salesman",
+ c.cust_name,
+ c.city
+from
+ salesman s
+inner join 
+  customer c
+on
+  s.city=c.city;
 ```
 
 **Output:**
 
-![Output10](output.png)
-
+![image](https://github.com/user-attachments/assets/9e1448a1-2e36-47e6-8118-3326a866fd80)
 
 ## RESULT
 Thus, the SQL queries to implement different types of joins have been executed successfully.
